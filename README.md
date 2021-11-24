@@ -1,13 +1,12 @@
 
-# Dicas
-![](/src/mqfs.jpg)
-
-##### Projeto de estudo do canal mqFS(Meu Querido Firebird Sql), aprendendo e registrando o apredizado.
-
-![Badge](https://img.shields.io/badge/Blog-Rocketseat-%237159c1?style=for-the-badge&logo=ghost)
+<div align="center"> 
+	<h1>Dicas</h1>
+	<img src='/src/mqfs.jpg' />
+	<h5>Projeto de estudo do canal mqFS(Meu Querido Firebird Sql), aprendendo e registrando o apredizado.</h5>
+</div>	
 
 <h6 align="center"> 
-	🚧  Dicas MqFS 🚀 Em construção...  🚧
+	🚧  Dicas MqFS 🚀 Em andamento...  🚧
 </h6>
 
 ### Tabela de conteúdos
