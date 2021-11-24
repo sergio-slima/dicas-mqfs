@@ -10,8 +10,8 @@
 =================
 <!--ts-->
    * [Pesquisar texto sql mais eficiente](#Pesquisar-texto-sql-mais-eficiente)
-   * [Tabela de Conteudo](#tabela-de-conteudo)
-   * [Instalação](#instalacao)
+   * [Jeito certo para arredondar valores](#Jeito-certo-para-arredondar-valores)
+   * [Explorando Order By](#Explorando-Order-By)
    * [Como usar](#como-usar)
       * [Pre Requisitos](#pre-requisitos)
       * [Local files](#local-files)
@@ -46,7 +46,7 @@
         where nome containing 'carlos';
     ```
 
-- **Jeito certo para arredondar valores**
+### Jeito certo para arredondar valores
 
     *Precisa globalizar um cast dentro da operação*
     ```
@@ -58,7 +58,7 @@
     from table
     ```
 
-- **Explorando Order By**
+### Explorando Order By
 
     *Deixando registro com campo nulo pra baixo ou dois campos ou por posição do campo no sql*
     ```
