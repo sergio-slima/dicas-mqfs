@@ -1,10 +1,14 @@
 
-# Dicas MQFS
+# Dicas
 ![](/src/mqfs.jpg)
 
 ##### Projeto de estudo do canal mqFS(Meu Querido Firebird Sql), aprendendo e registrando o apredizado.
 
 ![Badge](https://img.shields.io/badge/Blog-Rocketseat-%237159c1?style=for-the-badge&logo=ghost)
+
+<h6 align="center"> 
+	🚧  Dicas MqFS 🚀 Em construção...  🚧
+</h6>
 
 ### Tabela de conteúdos
 =================
@@ -12,23 +16,10 @@
    * [Pesquisar texto sql mais eficiente](#Pesquisar-texto-sql-mais-eficiente)
    * [Jeito certo para arredondar valores](#Jeito-certo-para-arredondar-valores)
    * [Explorando Order By](#Explorando-Order-By)
-   * [Como usar](#como-usar)
-      * [Pre Requisitos](#pre-requisitos)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-   * [Tests](#testes)
-   * [Tecnologias](#tecnologias)
 <!--te-->
-
-<h4 align="center"> 
-	🚧  Dicas MqFS 🚀 Em construção...  🚧
-</h4>
 
 ### Pesquisar texto sql mais eficiente
 
-    ```
     Antes:
         
         select 
@@ -44,24 +35,24 @@
             nome 
         from clientes 
         where nome containing 'carlos';
-    ```
+
 
 ### Jeito certo para arredondar valores
 
-    *Precisa globalizar um cast dentro da operação*
-    ```
+    // Precisa globalizar um cast dentro da operação
+ 
     select
         cast(
             cast(5 as numeric (15,5)) / 
             cast (30 as numeric (15,5))
         as numeric(15,2))
     from table
-    ```
+   
 
 ### Explorando Order By
 
-    *Deixando registro com campo nulo pra baixo ou dois campos ou por posição do campo no sql*
-    ```
+    // Deixando registro com campo nulo pra baixo ou dois campos ou por posição do campo no sql
+   
     select
         id,
         nome,
@@ -72,4 +63,4 @@
     order by nome nulls last, nome2
     ou
     order by 2
-    ```
+  
