@@ -2,7 +2,7 @@
 # Dicas MQFS
 ![](/src/mqfs.jpg)
 
-## Projeto de estudo do canal mqFS(Meu Querido Firebird Sql), aprendendo e registrando o apredizado.
+##### Projeto de estudo do canal mqFS(Meu Querido Firebird Sql), aprendendo e registrando o apredizado.
 
 ![Badge](https://img.shields.io/badge/Blog-Rocketseat-%237159c1?style=for-the-badge&logo=ghost)
 
@@ -26,18 +26,19 @@
 	🚧  Dicas MqFS 🚀 Em construção...  🚧
 </h4>
 
-#### - **Pesquisar texto sql mais eficiente**
+### Pesquisar texto sql mais eficiente
 
-    *Antes:*
     ```
+    Antes:
+        
         select 
             codigo, 
             nome 
         from clientes 
         where upper(nome) like '%carlos%';
-    ```
-    *Depois:* 
-    ```
+    
+    Depois: 
+    
         select 
             codigo, 
             nome 
