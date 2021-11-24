@@ -9,7 +9,7 @@
 ### Tabela de conteúdos
 =================
 <!--ts-->
-   * [Pesquisar texto sql mais eficiente](####Pesquisar-texto-sql-mais-eficiente)
+   * [Pesquisar texto sql mais eficiente](#Pesquisar-texto-sql-mais-eficiente)
    * [Tabela de Conteudo](#tabela-de-conteudo)
    * [Instalação](#instalacao)
    * [Como usar](#como-usar)
