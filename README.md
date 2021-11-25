@@ -2,7 +2,7 @@
 <div align="center"> 
 	<h1>Dicas</h1>
 	<img src='/src/mqfs.jpg' />
-	<h5>Projeto de estudo do canal mqFS(Meu Querido Firebird Sql), aprendendo e registrando o apredizado.</h5>
+	<h5>Projeto de estudo do canal mqFS(Meu Querido Firebird Sql), estudando e registrando o apredizado.</h5>
 </div>	
 
 <h6 align="center"> 
@@ -15,6 +15,7 @@
    * [Pesquisar texto sql mais eficiente](#Pesquisar-texto-sql-mais-eficiente)
    * [Jeito certo para arredondar valores](#Jeito-certo-para-arredondar-valores)
    * [Explorando Order By](#Explorando-Order-By)
+   * [Concatenar com nulo](#Concatenar-com-nulo)
 <!--te-->
 
 ### Pesquisar texto sql mais eficiente
@@ -63,3 +64,14 @@
     ou
     order by 2
   
+### Concatenar com nulo
+
+    // Modo correto de concatenar campos com valor nulo, usando "coalesce(field,'')"
+
+    select
+        'Código: ' || n.id || ' - ' ||
+        'Posição: ' || coalesce(n.posicao, 999) || ' - ' ||
+        'Menino: ' || coalesce(n.menino, 'Vazio') || ' - ' ||
+        'Menina: ' || coalesce(n.menina, 'Vazio') 
+        as "NOMES"
+    from nome n
