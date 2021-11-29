@@ -15,7 +15,8 @@
    * [Pesquisar texto sql mais eficiente](#Pesquisar-texto-sql-mais-eficiente)
    * [Jeito certo para arredondar valores](#Jeito-certo-para-arredondar-valores)
    * [Explorando Order By](#Explorando-Order-By)
-   * [Concatenar com nulo](#Concatenar-com-nulo)
+   * [Concatenar com nulo](#Concatenar-com-nulo)   
+   * [Char Varchar](#Char-Varchar)
 <!--te-->
 
 ### Pesquisar texto sql mais eficiente
@@ -75,3 +76,19 @@
         'Menina: ' || coalesce(n.menina, 'Vazio') 
         as "NOMES"
     from nome n
+
+### Char Varchar
+
+    // Campos Char utiliza todo seu valor, diferente do varchar que usa só o conteudo
+
+    select
+        '"' || 'Sergio' as varchar(100) || '"'    
+    from exemplo
+
+    Result: "Sergio"
+
+    select
+        '"' || 'Sergio' as char(100) || '"'    
+    from exemplo
+
+    Result: "Sergio                       "
