@@ -20,6 +20,7 @@
    * [Explorando Order By](#Explorando-Order-By)
    * [Concatenar com nulo](#Concatenar-com-nulo)   
    * [Char Varchar](#Char-Varchar)
+   * [Trabalhar Data Hora](#Trabalhar-Data-Hora)
    * [Autor](#Autor)
 <!--te-->
 
@@ -96,6 +97,16 @@
     from exemplo
 
     Result: "Sergio                       "
+
+### Trabalhar Data Hora
+
+    // Resultado de Data e hora no Sql
+
+    select
+        current_date,
+        current_time,
+        current_timestamp
+    from table   
     
     
 ### Autor
