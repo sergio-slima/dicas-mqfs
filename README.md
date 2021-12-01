@@ -21,6 +21,7 @@
    * [Concatenar com nulo](#Concatenar-com-nulo)   
    * [Char Varchar](#Char-Varchar)
    * [Trabalhar Data Hora](#Trabalhar-Data-Hora)
+   * [Conta Registros SQL](#Conta-Registros-SQL)
    * [Autor](#Autor)
 <!--te-->
 
@@ -107,6 +108,17 @@
         current_time,
         current_timestamp
     from table   
+
+### Conta Registros SQL
+
+    // Listar somente registros com repetição na contagem
+
+    select
+        n.menino,
+        count(n.id)
+    from nome n
+    group by n.menino
+    having count(n.id) > 1  
     
     
 ### Autor
