@@ -22,6 +22,7 @@
    * [Char Varchar](#Char-Varchar)
    * [Trabalhar Data Hora](#Trabalhar-Data-Hora)
    * [Conta Registros SQL](#Conta-Registros-SQL)
+   * [Substring SQL](#Substring-SQL)
    * [Autor](#Autor)
 <!--te-->
 
@@ -119,6 +120,15 @@
     from nome n
     group by n.menino
     having count(n.id) > 1  
+
+### Substring SQL
+
+    // copiar string com Sql
+    select
+        n.menino,
+        substring(n.menino from 1 for 3),   //pega três primeiro caractere
+        substring(n.menimo from 4),         //pega partir do quarto pro ultimo caractere
+        right(n.menino, 3)                  //pega os três ultimos caractere
     
     
 ### Autor
