@@ -124,12 +124,50 @@
 ### Substring SQL
 
     // copiar string com Sql
+
     select
         n.menino,
         substring(n.menino from 1 for 3),   //pega três primeiro caractere
         substring(n.menimo from 4),         //pega partir do quarto pro ultimo caractere
         right(n.menino, 3)                  //pega os três ultimos caractere
     
+### Calcular Datas
+
+    // Incrementando e subtraindo datas no sql
+
+    select
+        dateadd(day,20,current_date)      // soma dias
+        dateadd(month,20,current_date)    // soma mês
+        dateadd(year,20,current_date)     // soma ano
+        dateadd(day,-10,current_date)     // subtrair dias
+        dateadd(hour,15,current_timestamp)       // soma horas
+        dateadd(minute,150,current_timestamp)    // soma minutos
+        dateadd(second,300,current_timestamp)    // soma segundos
+
+        //Diferença entre Datas
+        datediff(month, current_date, dateadd(day,180,current_date))    // resultado: 6 meses
+    from rdb$database
+
+### Extrair Textos
+
+    // Como extrair um texto especifico de dentro de uma string numa posição aleatória. Ex: EXTRACAO
+
+    select
+        // Setando o inicio e o fim da string entre o @
+        position('@','TESTE DE @EXTRACAO@ DE TEXTO')  // primeiro resultado: position = 10 
+        position('@','TESTE DE @EXTRACAO@ DE TEXTO',(position('@','TESTE DE @EXTRACAO@ DE TEXTO')+1))  //segundo position = 19
+
+        // Calcular o valor de caractere entre o @
+        (position('@','TESTE DE @EXTRACAO@ DE TEXTO'),(position('@','TESTE DE @EXTRACAO@ DE TEXTO')+1)) //segundo
+        - position('@','TESTE DE @EXTRACAO@ DE TEXTO')  //primeiro
+
+        // Extraindo o texto
+        substring('TESTE DE @EXTRACAO@ DE TEXTO'
+            from (position('@','TESTE DE @EXTRACAO@ DE TEXTO') + 1)
+            for (position('@','TESTE DE @EXTRACAO@ DE TEXTO',(position('@','TESTE DE @EXTRACAO@ DE TEXTO')+1))
+            - position('@','TESTE DE @EXTRACAO@ DE TEXTO') - 1))
+        
+    from rdb$database 
     
 ### Autor
 
@@ -140,7 +178,7 @@
 </a>
 
 Desenvolvido por:
-Sergio SLima 👋🏽
+Sergio Lima 👋🏽
 Entre em contato!
 
 [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/fagnerpsantos)](https://github.com/sergio-slima)
