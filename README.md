@@ -23,6 +23,8 @@
    * [Trabalhar Data Hora](#Trabalhar-Data-Hora)
    * [Conta Registros SQL](#Conta-Registros-SQL)
    * [Substring SQL](#Substring-SQL)
+   * [Calcular Datas](#Calcular-Datas)
+   * [Extrair Textos](#Extrair-Textos)
    * [Autor](#Autor)
 <!--te-->
 
